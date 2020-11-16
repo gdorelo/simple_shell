@@ -155,6 +155,4 @@ AUTHORS  ctrlc.c      get_functions.c  loop.c  matchcommand.c      readline.c   
 
 <p align="center"> AUTHORS :mechanical_arm:</p>
 <p align="center">
-    <h2 align="center">Made by, Gianluca Dorelo and Miguel Crespi</h2>
-/p>
-/p>
+    <h2 align="center">Made by Gianluca Dorelo and Miguel Crespi</h2>

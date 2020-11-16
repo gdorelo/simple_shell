@@ -131,8 +131,8 @@ echo "/bin/ls" | ./hsh
 ```
 *Output*
 ```
-atoi.c   checkexit.c  execute.c        hsh     man_1_simple_shell  print_functions.c  README.md  split_functions.c   superminishell.c
-AUTHORS  ctrlc.c      get_functions.c  loop.c  matchcommand.c      readline.c         shell.h    string_functions.c
+example.c   example.c  example.c        file     man_1_simple_shell  example.c  README.md 
+AUTHORS  example.c      example.c  example.c  example.c      readline.c         shell.h 
 ```
 <hr>
 
@@ -146,8 +146,8 @@ Then the prompt appears, so you can type in the command line, and press return
 
 *Output*
 ```
-atoi.c   checkexit.c  execute.c        hsh     man_1_simple_shell  print_functions.c  README.md  split_functions.c   superminishell.c
-AUTHORS  ctrlc.c      get_functions.c  loop.c  matchcommand.c      readline.c         shell.h    string_functions.c
+example.c   example.c  example.c        file     man_1_simple_shell  example.c  README.md 
+AUTHORS  example.c      example.c  example.c  example.c      readline.c         shell.h  
 ```
 
 

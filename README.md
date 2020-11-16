@@ -6,7 +6,7 @@
 
 <p align="center">PROJECT SIMPLE_SHELL</p>
 
-## SIMPLE_SHELL
+## SIMPLE_SHELL 🐚
 A simple UNIX command interpreter written as part of the low-level programming and algorithm track at Holberton School.
 
 ### Installation
@@ -60,51 +60,51 @@ Prototypes | Description
 </p>
 
 ### Files
-This list is our files used to compile the shell 4.0
+This list is our files used to compile our shell
 
-* [shell.h](https://github.com/gedafu/simple_shell/blob/master/shell.h)
+* [shell.h](https://github.com/gdorelo/simple_shell/blob/master/shell.h)
 Header of functions where are store the prototypes and libraries.
 
-* [main.c](https://github.com/gedafu/simple_shell/blob/master/main.c)
+* [main.c](https://github.com/gdorelo/simple_shell/blob/master/main.c)
 Entry point to the shell.
 
-* [_free.c](https://github.com/gedafu/simple_shell/blob/master/_free.c)
+* [_free.c](https://github.com/gdorelo/simple_shell/blob/master/_free.c)
 Functions to free arguments.
 
-* [loop.c](https://github.com/gedafu/simple_shell/blob/master/loop.c)
+* [loop.c](https://github.com/gdorelo/simple_shell/blob/master/loop.c)
 Initializace the main loop of shell.
 
-* [matchcommand.c](https://github.com/gedafu/simple_shell/blob/master/matchcommand.c)
+* [matchcommand.c](https://github.com/gdorelo/simple_shell/blob/master/matchcommand.c)
 Function to find a command with or without path.
 
-* [atoi.c](https://github.com/gedafu/simple_shell/blob/master/atoi.c)
+* [atoi.c](https://github.com/gdorelo/simple_shell/blob/master/atoi.c)
 Change a character to a integer.
 
-* [string_functions.c](https://github.com/gedafu/simple_shell/blob/master/string_functions.c)
+* [string_functions.c](https://github.com/gdorelo/simple_shell/blob/master/string_functions.c)
 Suites Functions to handle strings; _strcat, _strtok, _strncmp, _strcmp, _strlen.
 
-* [readline.c](https://github.com/gedafu/simple_shell/blob/master/readline.c)
+* [readline.c](https://github.com/gdorelo/simple_shell/blob/master/readline.c)
 Function that read the command line.
 
-* [split_functions.c](https://github.com/gedafu/simple_shell/blob/master/split_functions.c)
+* [split_functions.c](https://github.com/gdorelo/simple_shell/blob/master/split_functions.c)
 Functions to split the command line and path enviroment; splitline and splitpath.
 
-* [get_functions.c](https://github.com/gedafu/simple_shell/blob/master/get_functions.c)
+* [get_functions.c](https://github.com/gdorelo/simple_shell/blob/master/get_functions.c)
 Functions to get the lines and search enviroment list; _getline, _getenv.
 
-* [print_functions.c](https://github.com/gedafu/simple_shell/blob/master/print_functions.c)
+* [print_functions.c](https://github.com/gdorelo/simple_shell/blob/master/print_functions.c)
 Suites functions to handle printing; _puts, _putchar, prompt.
 
-* [execute.c](https://github.com/gedafu/simple_shell/blob/master/execute.c)
+* [execute.c](https://github.com/gdorelo/simple_shell/blob/master/execute.c)
 Function execute each argument and return a integer to standard out.
 
-* [checkexit.c](https://github.com/gedafu/simple_shell/blob/master/checkexit.c)
+* [checkexit.c](https://github.com/gdorelo/simple_shell/blob/master/checkexit.c)
 Function to check a string "exit".
 
-* [ctrlc.c](https://github.com/gedafu/simple_shell/blob/master/ctrlc.c)
+* [ctrlc.c](https://github.com/gdorelo/simple_shell/blob/master/ctrlc.c)
 Function to exit when user type "Ctrl + c".
 
-* [strdup.c](https://github.com/gedafu/simple_shell/blob/master/strdup.c)
+* [strdup.c](https://github.com/gdorelo/simple_shell/blob/master/strdup.c)
 Function to duplicate a string.
 
 #### REQUIREMENTS

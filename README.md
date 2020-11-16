@@ -7,8 +7,7 @@
 <p align="center">PROJECT SIMPLE_SHELL</p>
 
 ## SIMPLE_SHELL
-A shell program is an application that allows interacting with the computer. In a shell the user through a terminal or takes the input from a file and executes a sequence of commands that are passed to the Operating System, can run programs and also redirect the input to come from a file and output to come from a file.
-
+A simple UNIX command interpreter written as part of the low-level programming and algorithm track at Holberton School.
 
 ### Installation
 
@@ -153,6 +152,6 @@ AUTHORS  ctrlc.c      get_functions.c  loop.c  matchcommand.c      readline.c   
 
 
 
-<p align="center"> AUTHORS :mechanical_arm:</p>
+<p align="center"> AUTHORS </p>
 <p align="center">
     <h2 align="center">Made by Gianluca Dorelo and Miguel Crespi</h2>

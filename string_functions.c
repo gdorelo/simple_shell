@@ -7,14 +7,14 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-    int a = 0;
-    while (s1[a] != '\0' && s2[a] != '\0')
-    {
-        if (s1[a] != s2[a])
-            return (s1[a] - s2[a]);
-        a++;
-    }
-    return (0);
+	int a = 0;
+	while (s1[a] != '\0' && s2[a] != '\0')
+	{
+		if (s1[a] != s2[a])
+			return (s1[a] - s2[a]);
+		a++;
+	}
+	return (0);
 }
 /**
  * _strlen - function to know the length of the string
@@ -23,10 +23,10 @@ int _strcmp(char *s1, char *s2)
  */
 int _strlen(char *s)
 {
-    int len = 0;    
-    while (s[len])
-        len++;
-    return (len);
+	int len = 0;    
+	while (s[len])
+		len++;
+	return (len);
 }
 /**
  * _strcpy - copies string pointed to by src
@@ -36,11 +36,11 @@ int _strlen(char *s)
  */
 char *_strcpy(char *dest, char *src)
 {
-    int i;  for (i = 0; src[i] != '\0'; i++)
-    {
-        dest[i] = src[i];
-    }   dest[i] = '\0';
-    return (dest);
+	int i;  for (i = 0; src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}   dest[i] = '\0';
+	return (dest);
 }
 /**
  * _strcat - function concatenates two strings

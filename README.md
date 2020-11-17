@@ -27,30 +27,30 @@ Prototypes | Description
 ----------- | -------------
 **loop** | Start the main loop our shell.
 **readline** | Read the line command.
-**checkspaces** | Funtion avoid spaces at the beginning of the command line.
+**replace** | 
 **splitline** | Split line command and convert to *tokens* each argument.
-**splitpath** | Split the path in a new string.
+**replace** | 
 **execute** | Function to execute all arguments in command line.
-**_getenv** | search the enviroment list to find enviroment variable.
-**checkenv** | Funtion check if the command is env to print it.
+**replace** | 
+**replace** | 
 **_putchar** | Function to print a character.
 **_puts** | Function to print a string.
-**prompt** | Funtion to print our prompt line.
-**_printenv** | Funtion to print the environment.
-**print_number** | Funtion to print a number in STDERR.
-**errorsys** | Funtion to print in STDERR when a command is not found or the program does not exist.
-**matchcommand** | Function to get the command.
-**atoi** | Change a character to a integer.
-**_free** | Funtion to free arguments.
-**checkexit** | when the user type "exit" make a match and break the fucntion loop to exit from the shell.
-**simplexit** | Funtion to check the exit with estatus.
-**ctrlc** | the user type "ctrl + c" and break the process in the shell and exit.
-**_strtok** | Function to tokenize each argument in the command line.
-**_strcat** | Function to concatenates two strings.
-**_strcmp** | Function to comparates two strings.
-**_strncmp** | Function to compare two strings with a certain amount of bytes.
-**_strlen** | Function to know the length of the string.
-**_strdup** | the user type "ctrl + c" and break the process in the shell and exit.
+**prompt** | Function to print our prompt line.
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
+**replace** | 
 
 
 ### Flowchart
@@ -68,11 +68,8 @@ Header of functions where are store the prototypes and libraries.
 * [main.c](https://github.com/gdorelo/simple_shell/blob/master/main.c)
 Entry point to the shell.
 
-* [_free.c](https://github.com/gdorelo/simple_shell/blob/master/_free.c)
-Functions to free arguments.
-
 * [loop.c](https://github.com/gdorelo/simple_shell/blob/master/loop.c)
-Initializace the main loop of shell.
+Initializace the main loop of the shell.
 
 * [matchcommand.c](https://github.com/gdorelo/simple_shell/blob/master/matchcommand.c)
 Function to find a command with or without path.
@@ -88,9 +85,6 @@ Function that read the command line.
 
 * [split_functions.c](https://github.com/gdorelo/simple_shell/blob/master/split_functions.c)
 Functions to split the command line and path enviroment; splitline and splitpath.
-
-* [get_functions.c](https://github.com/gdorelo/simple_shell/blob/master/get_functions.c)
-Functions to get the lines and search enviroment list; _getline, _getenv.
 
 * [print_functions.c](https://github.com/gdorelo/simple_shell/blob/master/print_functions.c)
 Suites functions to handle printing; _puts, _putchar, prompt.

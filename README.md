@@ -26,32 +26,16 @@ A simple UNIX command interpreter written as part of the low-level programming a
 Prototypes | Description
 ----------- | -------------
 **loop** | Start the main loop our shell.
-**readline** | Read the line command.
-**replace** | 
-**splitline** | Split line command and convert to *tokens* each argument.
-**replace** | 
-**execute** | Function to execute all arguments in command line.
-**replace** | 
-**replace** | 
-**_putchar** | Function to print a character.
-**_puts** | Function to print a string.
 **prompt** | Function to print our prompt line.
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-**replace** | 
-
+**save_buffer** | Read the line command.
+**split_buffer** | Split line command and convert to *tokens* each argument.
+**execute** | Function to execute all arguments in command line.
+**find_path** | Searches the enviroment list to find the command's path.
+**split_path** | Function that splits the path.
+**_strcat** | Function to concatenates two strings.
+**_strcmp** | Function to comparates two strings.
+**_strlen** | Function to know the length of the string.
+**_strcpy** | Function to copy a string.
 
 ### Flowchart
 

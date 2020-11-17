@@ -55,35 +55,30 @@ Entry point to the shell.
 * [loop.c](https://github.com/gdorelo/simple_shell/blob/master/loop.c)
 Initializace the main loop of the shell.
 
-* [matchcommand.c](https://github.com/gdorelo/simple_shell/blob/master/matchcommand.c)
+* [pathfinder.c](https://github.com/gdorelo/simple_shell/blob/master/pathfinder.c)
 Function to find a command with or without path.
 
-* [atoi.c](https://github.com/gdorelo/simple_shell/blob/master/atoi.c)
-Change a character to a integer.
+* [prompt.c](https://github.com/gdorelo/simple_shell/blob/master/prompt.c)
+Function to print the prompt.
 
 * [string_functions.c](https://github.com/gdorelo/simple_shell/blob/master/string_functions.c)
-Suites Functions to handle strings; _strcat, _strtok, _strncmp, _strcmp, _strlen.
+Functions to handle strings.
 
-* [readline.c](https://github.com/gdorelo/simple_shell/blob/master/readline.c)
-Function that read the command line.
+* [save_buffer.c](https://github.com/gdorelo/simple_shell/blob/master/save_buffer.c)
+Function that reads and saves the command line.
 
-* [split_functions.c](https://github.com/gdorelo/simple_shell/blob/master/split_functions.c)
-Functions to split the command line and path enviroment; splitline and splitpath.
+* [split_buffer.c](https://github.com/gdorelo/simple_shell/blob/master/split_buffer.c)
+Functions to split the command line.
 
-* [print_functions.c](https://github.com/gdorelo/simple_shell/blob/master/print_functions.c)
-Suites functions to handle printing; _puts, _putchar, prompt.
+* [split_path.c](https://github.com/gdorelo/simple_shell/blob/master/split_path.c)
+Function that splits the path.
 
-* [execute.c](https://github.com/gdorelo/simple_shell/blob/master/execute.c)
+* [execute_command.c](https://github.com/gdorelo/simple_shell/blob/master/execute_command.c)
 Function execute each argument and return a integer to standard out.
-
-* [checkexit.c](https://github.com/gdorelo/simple_shell/blob/master/checkexit.c)
-Function to check a string "exit".
 
 * [ctrlc.c](https://github.com/gdorelo/simple_shell/blob/master/ctrlc.c)
 Function to exit when user type "Ctrl + c".
 
-* [strdup.c](https://github.com/gdorelo/simple_shell/blob/master/strdup.c)
-Function to duplicate a string.
 
 #### REQUIREMENTS
 

@@ -47,12 +47,6 @@ When locating a command, the shell first looks to see if it has a shell function
 .RE
 
 .SS Command  Exit Status
-.PP
-Each command has an exit status that can influence the behaviour of other shell commands.  The paradigm is that a command exits with zero for normal or success, and non-zero for failure, error, or a false indication.  The man page for each command should indicate the various exit codes and what they mean.  Additionally, the built-in commands returns exit codes, as does an executed shell function.
-
-If a command consists entirely of variable assignments then the exit status of thecommand is that of the last command substitution if any, otherwise 0.
-
-Errors that are detected by the shell, such as a syntax error, will cause the shell to exit with a non-zero exit status.  If the shell is not an interactive shell, the execution of the shell file will be aborted.  Otherwise the shell will return the exit status of the lastcommand executed, or if the exit builtin is used with a numeric argument, it will return the argument.
 
 .SS ENVIRONMENT
 .RS

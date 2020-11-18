@@ -3,7 +3,7 @@
  * prompt - Prints our prompt line.
  * Return: Nothing.
  */
-void prompt (void)
+void prompt(void)
 {
-  write(STDOUT_FILENO, "#CisFun$ ", 9);
+	write(STDOUT_FILENO, "#CisFun$ ", 9);
 }

@@ -8,11 +8,12 @@
 char *split_path(char *path, char **args)
 {
 	char *folder = NULL;
-	struct stat fileStat;    
-	folder = strtok(path, ":");    
+	struct stat fileStat;
+	folder = strtok(path, ":");
 	char *command = malloc(sizeof(char) * _strlen(args[0]) + _strlen(folder));
+
 	if (!command)
-		return (NULL);    
+		return (NULL);
 	while (folder != NULL)
 	{
 		command[0] = '\0';
@@ -21,8 +22,8 @@ char *split_path(char *path, char **args)
 		command = _strcat(command, args[0]);
 		/*printf("COMMAND 0 : %s\n", command);*/
 		if (stat(command, &fileStat) == 0)
-			return (command);        
-		folder = strtok(NULL, ":"); 
+			return (command);
+		folder = strtok(NULL, ":");
 	}
 	return (NULL);
 }

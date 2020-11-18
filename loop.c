@@ -6,13 +6,14 @@
 #include "shell.h"
 int loop(char *av)
 {
-  char **pbuffer;
-  char **args;
-  int num_of_tokens = 0, i, j;
-  int *num = &num_of_tokens;
-  int process;
-  char *strPath;
-  while (1)
+	char **pbuffer;
+	char **args;
+	int num_of_tokens = 0, i, j;
+	int *num = &num_of_tokens;
+	int process;
+	char *strPath;
+
+	while (1)
 	{
 	  if (isatty(STDIN_FILENO))
 		prompt();
@@ -26,6 +27,6 @@ int loop(char *av)
 	  /*for (i = 0; i < num_of_tokens; i++) */
 	  /*  printf("%s\n ", args[i]); */
 	}
-  free(*pbuffer);
-  return (0);
+	free(*pbuffer);
+	return (0);
 }

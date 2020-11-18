@@ -8,6 +8,7 @@
 int _strcmp(char *s1, char *s2)
 {
 	int a = 0;
+
 	while (s1[a] != '\0' && s2[a] != '\0')
 	{
 		if (s1[a] != s2[a])
@@ -23,7 +24,8 @@ int _strcmp(char *s1, char *s2)
  */
 int _strlen(char *s)
 {
-	int len = 0;    
+	int len = 0;
+
 	while (s[len])
 		len++;
 	return (len);
@@ -48,10 +50,11 @@ char *_strcpy(char *dest, char *src)
  * @src: string of source
  * Return:  dest - strings concatenated
  */
- char *_strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
 	int i = 0;
 	int x = 0;
+
 	while (dest[i] != '\0')
 	{
 		i++;

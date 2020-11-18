@@ -3,16 +3,19 @@
  * save_buffer - function that saves buffer
  * Return: a double pointer with the buffer
  */
-char ** save_buffer(void)
+char **save_buffer(void)
 {
 	char *buffer = NULL;
 	char **pbuffer = &buffer;
 	size_t size;
 	int n;
+
 	buffer = malloc(sizeof(char) * BUFFSIZE);
 	if (!buffer)
 		return (NULL);
-	n = getline(&buffer, &size, stdin);
+	
+n = getline(&buffer, &size, stdin);
+	
 	if (n == EOF)
 	{
 			free(buffer);

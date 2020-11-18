@@ -5,14 +5,15 @@
  * @num: number
  * Return: a double pointer with tokens
  */
-char ** split_buffer(char *pbuffer, int *num)
+char **split_buffer(char *pbuffer, int *num)
 {
 	char *token = NULL;
 	unsigned int i = 0;
-	char **tokens = malloc(sizeof (char *) * BUFFSIZE);
+	char **tokens = malloc(sizeof(char *) * BUFFSIZE);
+
 	if (!tokens)
 		return (NULL);
-	token = strtok(pbuffer, " ");
+token = strtok(pbuffer, " ");
 	while (token != NULL)
 		{
 			tokens[i] = token;

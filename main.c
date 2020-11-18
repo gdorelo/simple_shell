@@ -9,7 +9,7 @@ int main(int ac, char **av)
 {
 	int outstatus;
 	(void)ac;
-	
+
 	outstatus = loop(av[0]);
 	return (outstatus);
 }

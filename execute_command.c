@@ -27,5 +27,4 @@ int execute(char *args[], char *av, char **env_var, char *path)
 	else
 		wait(&status);
 	return (pid);
-	}
-	
+}

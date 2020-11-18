@@ -15,7 +15,7 @@ int loop(char *av)
 
 	while (1)
 	{
-	  if (isatty(STDIN_FILENO))
+	if (isatty(STDIN_FILENO))
 		prompt();
 	  pbuffer = save_buffer();
 	  /*printf("Buffer en MAIN = %s Fin de BUFFER\n", *(pbuffer)); */

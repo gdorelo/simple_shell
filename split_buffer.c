@@ -13,14 +13,14 @@ char **split_buffer(char *pbuffer, int *num)
 
 	if (!tokens)
 		return (NULL);
-token = strtok(pbuffer, " ");
+	token = strtok(pbuffer, " ");
 	while (token != NULL)
-		{
-			tokens[i] = token;
-			i++;
-			*(num) = i;
-			token = strtok(NULL, " ");
-		}
+	{
+		tokens[i] = token;
+		i++;
+		*(num) = i;
+		token = strtok(NULL, " ");
+	}
 	tokens[i] = NULL;
 	free(token);
 	return (tokens);

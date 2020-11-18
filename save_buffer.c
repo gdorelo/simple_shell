@@ -1,4 +1,4 @@
-#include "shell.h"
+B#include "shell.h"
 /**
  * save_buffer - function that saves buffer
  * Return: a double pointer with the buffer
@@ -13,13 +13,13 @@ char **save_buffer(void)
 	buffer = malloc(sizeof(char) * BUFFSIZE);
 	if (!buffer)
 		return (NULL);
-	
-n = getline(&buffer, &size, stdin);
-	
+
+	n = getline(&buffer, &size, stdin);
+
 	if (n == EOF)
 	{
-			free(buffer);
-			exit(0);
+		free(buffer);
+		exit(0);
 	}
 	if (n == 1)
 	{

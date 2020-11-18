@@ -9,6 +9,7 @@ char *split_path(char *path, char **args)
 {
 	char *folder = NULL;
 	struct stat fileStat;
+
 	folder = strtok(path, ":");
 	char *command = malloc(sizeof(char) * _strlen(args[0]) + _strlen(folder));
 

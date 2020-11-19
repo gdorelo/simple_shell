@@ -4,8 +4,6 @@
      style="float: left; margin-right: 10px;">
 </p>
 
-<p align="center">PROJECT SIMPLE_SHELL</p>
-
 ## SIMPLE_SHELL 🐚
 A simple UNIX command interpreter written as part of the low-level programming and algorithm track at Holberton School.
 
@@ -18,33 +16,41 @@ A simple UNIX command interpreter written as part of the low-level programming a
 #### Steps to compile and execute.
  - `git clone https://github.com/gdorelo/simple_shell.git`
  - `cd simple_shell`
- - `gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
- - `./hsh`
+ - `gcc -Wall -Werror -Wextra -pedantic *.c -o shell`
+ - `./shell`
 
 
 ### Sys Functions
 Prototypes | Description
 ----------- | -------------
-**loop** | Start the main loop our shell.
-**prompt** | Function to print our prompt line.
-**save_buffer** | Read the line command.
-**split_buffer** | Split line command and convert to *tokens* each argument.
-**execute** | Function to execute all arguments in command line.
-**find_path** | Searches the enviroment list to find the command's path.
-**split_path** | Function that splits the path.
-**_strcat** | Function to concatenates two strings.
-**_strcmp** | Function to comparates two strings.
-**_strlen** | Function to know the length of the string.
-**_strcpy** | Function to copy a string.
-
-### Flowchart
-
-<p align="center">
-   <img src="">
-</p>
+**loop** | Start the main loop to our shell.
+**readline** | Read the command line.
+**checkspaces** | Function to avoid spaces at the beginning of the command line.
+**splitline** | Split command line and convert each argument to *tokens*.
+**splitpath** | Split the path in a new string.
+**execute** | Execute all arguments in command line.
+**_getenv** | Search the enviroment list to find an enviroment variable.
+**checkenv** | Funtion check if the command is "env" to print **environ.
+**_putchar** | Function to print a character.
+**_puts** | Function to print a string.
+**prompt** | Prompt the user with "#CisFun$ ".
+**_printenv** | Print the environment.
+**print_number** | Print a number in STDERR.
+**errorsys** | Print in STDERR when a command is not found or the program does not exist.
+**getpath** | Get the command's full path.
+**atoi** | Change a character to a integer.
+**_free** | Function to free arguments.
+**simplexit** | Check if the command entered is "exit" and exit the shell.
+**ctrlc** | Function to treat ctrl+c as a normal input and not exit.
+**_strtok** | Function to tokenize a string according to a defined delimiter.
+**_strcat** | Function to concatenate two strings.
+**_strcmp** | Function to compare two strings.
+**_strncmp** | Function to compare two strings with a certain amount of characters.
+**_strlen** | Function to get the length of a string.
+**_strdup** | Function to duplicate a string.
 
 ### Files
-This list is our files used to compile our shell
+This is the list of files used to compile our shell.
 
 * [shell.h](https://github.com/gdorelo/simple_shell/blob/master/shell.h)
 Header of functions where are store the prototypes and libraries.
@@ -73,11 +79,11 @@ Functions to split the command line.
 * [split_path.c](https://github.com/gdorelo/simple_shell/blob/master/split_path.c)
 Function that splits the path.
 
-* [execute_command.c](https://github.com/gdorelo/simple_shell/blob/master/execute_command.c)
+* [execute.c](https://github.com/gdorelo/simple_shell/blob/master/execute.c)
 Function execute each argument and return a integer to standard out.
 
 * [ctrlc.c](https://github.com/gdorelo/simple_shell/blob/master/ctrlc.c)
-Function to exit when user type "Ctrl + c".
+Function to not exit when the user presses "Ctrl + c".
 
 
 #### REQUIREMENTS

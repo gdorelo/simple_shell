@@ -1,32 +1,38 @@
+#include "shell.h"
 /**
  * loop - loop.
- * @av: name of the program passed.
+ * @program: name of the program.
  * Return: 0 to EXIT_SUCCESS.
  */
-#include "shell.h"
-int loop(char *av)
+int loop(char *program)
 {
-	char **pbuffer;
-	char **args;
-	int num_of_tokens = 0, i, j;
-	int *num = &num_of_tokens;
-	int process;
-	char *strPath;
+	char *line = NULL;
+	char **args = NULL;
+	int status = 1, outstatus = 0, counter = 1;
 
-	while (1)
+	while (status)
 	{
-	if (isatty(STDIN_FILENO))
+		if (isatty(STDIN_FILENO))
 		prompt();
-	  pbuffer = save_buffer();
-	  /*printf("Buffer en MAIN = %s Fin de BUFFER\n", *(pbuffer)); */
-	  args = split_buffer(*pbuffer, num);
-	  /*printf("Numero de tokens = %d\n", num_of_tokens); */
-	  strPath = find_path(environ, args);
-	  /*printf("PATH EN MAIN %s\n", strPath);*/
-	  process = execute(args, av, environ, strPath);
-	  /*for (i = 0; i < num_of_tokens; i++) */
-	  /*  printf("%s\n ", args[i]); */
+		/* read the line from the command line */
+		line = readline(outstatus);
+		/* if a new line is passed to the command line */
+		if (line == NULL)
+		continue;
+		/* check if there is any spaces at the beginning of the line */
+		line = checkspaces(line);
+		if (line == NULL)
+		continue;
+		/* check just the word exit with the last status */
+		simplexit(line, outstatus);
+		/* split the command line in separate arguments */
+		args = splitline(line);
+		/* check if the command is "env" and print env */
+		if (checkenv(args[0], args))
+		continue;
+		/* execute the command passed */
+		outstatus = execute(args, counter, program);
+		counter++;
 	}
-	free(*pbuffer);
-	return (0);
+	return (outstatus);
 }

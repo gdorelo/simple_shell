@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * readline - Function that read our line command.
- * @status: In case EOF exit with status
- * Return: The string of characters.
+ * read_command_line - Function that reads the command line.
+ * @status: Exit with status at EOF
+ * Return: string passed to the command line 
  */
-char *readline(int status)
+char *read_command_line(int status)
 {
 	char *line = NULL;
 	char *buffer = NULL;

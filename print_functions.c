@@ -12,28 +12,18 @@ void _puts(char *str)
 		_putchar(*(str + a));
 }
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
-int _putchar(char c)
-{
-	return (write(1, &c, 1));
-}
-/**
- * prompt - Prints our prompt line.
- * Return: Nothing.
+ * prompt - Prints the prompt line.
+ * Return: No return.
  */
 void prompt(void)
 {
-	_puts("#CisFun$ ");
+	_puts("#$ ");
 }
 /**
- * _printenv - function that prints the system enviroment.
+ * print_environ - function that prints the system enviroment.
  * Return: nothing.
  */
-void _printenv(void)
+void print_environ(void)
 {
 	int i = 0;
 	char **env = environ;
@@ -46,10 +36,10 @@ void _printenv(void)
 	}
 }
 /**
- * print_number - print integer.
+ * print_int - print integer.
  * @n: the integer.
  */
-void print_number(int n)
+void print_int(int n)
 {
 	unsigned int i;
 	unsigned int p;
@@ -63,7 +53,17 @@ void print_number(int n)
 	else
 		i = n;
 	if (n / 10 != 0)
-		print_number(i / 10);
+		print_int(i / 10);
 	p = i % 10 + 48;
 	write(STDERR_FILENO, ptr, 1);
+}
+/**
+ * _putchar - writes the character c to stdout
+ * @c: The character to print
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
 }

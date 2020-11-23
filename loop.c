@@ -15,7 +15,7 @@ int loop(char *program)
 		if (isatty(STDIN_FILENO))
 		prompt();
 		/* read the line from the command line */
-		line = readline(outstatus);
+		line = read_command_line(outstatus);
 		/* if a new line is passed to the command line */
 		if (line == NULL)
 		continue;
@@ -24,11 +24,11 @@ int loop(char *program)
 		if (line == NULL)
 		continue;
 		/* check just the word exit with the last status */
-		simplexit(line, outstatus);
+		basic_exit(line, outstatus);
 		/* split the command line in separate arguments */
 		args = splitline(line);
 		/* check if the command is "env" and print env */
-		if (checkenv(args[0], args))
+		if (_env(args[0], args))
 		continue;
 		/* execute the command passed */
 		outstatus = execute(args, counter, program);

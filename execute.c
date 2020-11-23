@@ -3,10 +3,10 @@
  * execute - function that execute all arguments in command line.
  * @args: Arguments typed into the line command.
  * @counter: counter of commands.
- * @name: Name of the program.
+ * @program: Name of the program.
  * Return: No return.
  */
-int execute(char **args, int counter, char *name)
+int execute(char **args, int counter, char *program)
 {
 	pid_t pid;
 	int status, errorstatus = 0;
@@ -15,7 +15,7 @@ int execute(char **args, int counter, char *name)
 	command = getpath(args[0]);
 	if (command == NULL)
 	{
-		errorsys(args[0], counter, "not found", name);
+		sys_error(args[0], counter, "not found", program);
 		free(args[0]);
 		free(args);
 		return (127);
@@ -27,7 +27,7 @@ int execute(char **args, int counter, char *name)
 	{
 		if (execve(command, args, environ) == -1)
 		{
-		errorsys(command, counter, "cannot execute", name);
+		sys_error(command, counter, "cannot execute", program);
 		_free(command, args[0], args);
 		exit(errno);
 		}

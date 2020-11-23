@@ -11,10 +11,10 @@
 #include <errno.h>
 #define BUFFERSIZE 512
 extern char **environ;
-int loop(char *name);
-char *readline(int status);
+int loop(char *program);
+char *read_command_line(int status);
 char **splitline(char *buffer);
-int execute(char **args, int counter, char *name);
+int execute(char **args, int counter, char *program);
 char *_getenv(char *path);
 char **splitpath(char *path);
 char *getpath(char *command);
@@ -27,13 +27,13 @@ char *_strcat(char *dest, char *src);
 void prompt(void);
 int _putchar(char c);
 void _puts(char *str);
-void _printenv(void);
-void print_number(int n);
-void errorsys(char *argv, int count, char *error, char *name);
-int simplexit(char *arg, int status);
-int checkenv(char *arg, char **args);
+void print_environ(void);
+void print_int(int n);
+void sys_error(char *argv, int count, char *error, char *program);
+int basic_exit(char *arg, int status);
+int _env(char *arg, char **args);
 char *checkspaces(char *line);
-void ctrlc(int sign);
+void ctrl_c(int sign);
 int _atoi(char *s);
 ssize_t _getline(char **buffline, size_t *size, FILE *std);
 void _free(char *command, char *arg, char **args);

@@ -10,7 +10,7 @@ int main(int ac, char **av)
 	int outstatus = 0;
 	(void)ac;
 
-	signal(SIGINT, ctrlc);
+	signal(SIGINT, ctrl_c);
 	outstatus = loop(av[0]);
 	return (outstatus);
 }

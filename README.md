@@ -24,24 +24,24 @@ A simple UNIX command interpreter written as part of the low-level programming a
 Prototypes | Description
 ----------- | -------------
 **loop** | Start the main loop to our shell.
-**readline** | Read the command line.
+**read_command_line** | Read the command line.
 **checkspaces** | Function to avoid spaces at the beginning of the command line.
 **splitline** | Split command line and convert each argument to *tokens*.
 **splitpath** | Split the path in a new string.
 **execute** | Execute all arguments in command line.
 **_getenv** | Search the enviroment list to find an enviroment variable.
-**checkenv** | Funtion check if the command is "env" to print **environ.
+**_env** | Funtion check if the command is "env" to print **environ.
 **_putchar** | Function to print a character.
 **_puts** | Function to print a string.
-**prompt** | Prompt the user with "#CisFun$ ".
-**_printenv** | Print the environment.
-**print_number** | Print a number in STDERR.
-**errorsys** | Print in STDERR when a command is not found or the program does not exist.
+**prompt** | Prompt the user with "$ ".
+**print_environ** | Print the environment.
+**print_int** | Print a number in STDERR.
+**sys_error** | Print in STDERR when a command is not found or the program does not exist.
 **getpath** | Get the command's full path.
 **atoi** | Change a character to a integer.
 **_free** | Function to free arguments.
-**simplexit** | Check if the command entered is "exit" and exit the shell.
-**ctrlc** | Function to treat ctrl+c as a normal input and not exit.
+**basic_exit** | Check if the command entered is "exit" and exit the shell.
+**ctrl_c** | Function to treat ctrl+c as a normal input and not exit.
 **_strtok** | Function to tokenize a string according to a defined delimiter.
 **_strcat** | Function to concatenate two strings.
 **_strcmp** | Function to compare two strings.
@@ -61,7 +61,7 @@ Entry point to the shell.
 * [loop.c](https://github.com/gdorelo/simple_shell/blob/master/loop.c)
 Initializace the main loop of the shell.
 
-* [pathfinder.c](https://github.com/gdorelo/simple_shell/blob/master/pathfinder.c)
+* [getpath.c](https://github.com/gdorelo/simple_shell/blob/master/getpath.c)
 Function to find a command with or without path.
 
 * [prompt.c](https://github.com/gdorelo/simple_shell/blob/master/prompt.c)
@@ -82,7 +82,7 @@ Function that splits the path.
 * [execute.c](https://github.com/gdorelo/simple_shell/blob/master/execute.c)
 Function execute each argument and return a integer to standard out.
 
-* [ctrlc.c](https://github.com/gdorelo/simple_shell/blob/master/ctrlc.c)
+* [ctrl_c.c](https://github.com/gdorelo/simple_shell/blob/master/ctrl_c.c)
 Function to not exit when the user presses "Ctrl + c".
 
 
@@ -111,7 +111,7 @@ echo "/bin/ls" | ./hsh
 *Output*
 ```
 example.c   example.c  example.c        file     man_1_simple_shell  example.c  README.md 
-AUTHORS  example.c      example.c  example.c  example.c      readline.c         shell.h 
+AUTHORS  example.c      example.c  example.c  example.c      read_command_line.c         shell.h 
 ```
 <hr>
 
@@ -126,7 +126,7 @@ Then the prompt appears, so you can type in the command line, and press return
 *Output*
 ```
 example.c   example.c  example.c        file     man_1_simple_shell  example.c  README.md 
-AUTHORS  example.c      example.c  example.c  example.c      readline.c         shell.h  
+AUTHORS  example.c      example.c  example.c  example.c      read_command_line.c         shell.h  
 ```
 
 

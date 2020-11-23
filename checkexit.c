@@ -1,8 +1,8 @@
 #include "shell.h"
 /**
- * checkspaces - function to check a string of spaces
+ * checkspaces - function to check if extra spaces are passed
  * @line: Pointer to string.
- * Return: null or a string without spaces.
+ * Return: null or a string without extra spaces.
  */
 char *checkspaces(char *line)
 {
@@ -23,12 +23,12 @@ char *checkspaces(char *line)
 	return (NULL);
 }
 /**
- * simplexit - function to check a string
+ * basic_exit - function to check a string for the word exit
  * @arg: Pointer to string.
  * @status: status to exit
  * Return: 0 if the match is NOT success else exit.
  */
-int simplexit(char *arg, int status)
+int basic_exit(char *arg, int status)
 {
 	int len;
 
@@ -45,12 +45,12 @@ int simplexit(char *arg, int status)
 	return (0);
 }
 /**
- * checkenv - function check env built
+ * _env - function to check if "env" was passed and print environ if it was
  * @arg: Pointer to string.
- * @args: double pointer to be free
+ * @args: double pointer to be freed
  * Return: 1 if the match is success else 0.
  */
-int checkenv(char *arg, char **args)
+int _env(char *arg, char **args)
 {
 	int len;
 
@@ -58,7 +58,7 @@ int checkenv(char *arg, char **args)
 	if (len == 3)
 		if ((_strncmp("env", arg, 3)) == 0)
 		{
-		_printenv();
+		print_environ();
 		free(arg);
 		free(args);
 		return (1);
@@ -66,18 +66,18 @@ int checkenv(char *arg, char **args)
 	return (0);
 }
 /**
- * errorsys - puts in command line the error
- * @argv: pointer to pointer
- * @count: the history
+ * sys_error - puts in STDOUT the error
+ * @argv: double pointer
+ * @count: number of times a command was passed
  * @error: exit error.
- * @name: name of the program.
+ * @program: name of the program.
  * Return: Nothing.
  */
-void errorsys(char *argv, int count, char *error, char *name)
+void sys_error(char *argv, int count, char *error, char *program)
 {
-	write(STDERR_FILENO, name, _strlen(name));
+	write(STDERR_FILENO, program, _strlen(program));
 	write(STDERR_FILENO, ": ", 2);
-	print_number(count);
+	print_int(count);
 	write(STDERR_FILENO, ": ", 2);
 	write(STDERR_FILENO, argv, _strlen(argv));
 	write(STDERR_FILENO, ": ", 2);

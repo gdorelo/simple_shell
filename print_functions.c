@@ -12,14 +12,6 @@ void _puts(char *str)
 		_putchar(*(str + a));
 }
 /**
- * prompt - Prints the prompt line.
- * Return: No return.
- */
-void prompt(void)
-{
-	_puts("#$ ");
-}
-/**
  * print_environ - function that prints the system enviroment.
  * Return: nothing.
  */

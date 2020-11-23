@@ -5,7 +5,7 @@
 </p>
 
 ## SIMPLE_SHELL 🐚
-A simple UNIX command interpreter written as part of the low-level programming and algorithm track at Holberton School.
+Simple UNIX command interpreter built as the final project of the first trimester at Holberton School.
 
 ### Installation
 
@@ -20,7 +20,7 @@ A simple UNIX command interpreter written as part of the low-level programming a
  - `./shell`
 
 
-### Sys Functions
+### Functions
 Prototypes | Description
 ----------- | -------------
 **loop** | Start the main loop to our shell.
@@ -52,41 +52,58 @@ Prototypes | Description
 ### Files
 This is the list of files used to compile our shell.
 
-* [shell.h](https://github.com/gdorelo/simple_shell/blob/master/shell.h)
-Header of functions where are store the prototypes and libraries.
+* [_free.c](https://github.com/gdorelo/simple_shell/blob/master/_free.c)
+Function to free passed arguments.
 
-* [main.c](https://github.com/gdorelo/simple_shell/blob/master/main.c)
-Entry point to the shell.
+* [_getenv.c](https://github.com/gdorelo/simple_shell/blob/master/_getenv.c)
+Functions to check the environ variable for the PATH.
 
-* [loop.c](https://github.com/gdorelo/simple_shell/blob/master/loop.c)
-Initializace the main loop of the shell.
+* [_strlen_.c](https://github.com/gdorelo/simple_shell/blob/master/_strlen_.c)
+Function to count characters in a string.
 
-* [getpath.c](https://github.com/gdorelo/simple_shell/blob/master/getpath.c)
-Function to find a command with or without path.
+* [atoi.c](https://github.com/gdorelo/simple_shell/blob/master/_free.c)
+Function to convert a string into an integer.
 
-* [prompt.c](https://github.com/gdorelo/simple_shell/blob/master/prompt.c)
-Function to print the prompt.
-
-* [string_functions.c](https://github.com/gdorelo/simple_shell/blob/master/string_functions.c)
-Functions to handle strings.
-
-* [save_buffer.c](https://github.com/gdorelo/simple_shell/blob/master/save_buffer.c)
-Function that reads and saves the command line.
-
-* [split_buffer.c](https://github.com/gdorelo/simple_shell/blob/master/split_buffer.c)
-Functions to split the command line.
-
-* [split_path.c](https://github.com/gdorelo/simple_shell/blob/master/split_path.c)
-Function that splits the path.
-
-* [execute.c](https://github.com/gdorelo/simple_shell/blob/master/execute.c)
-Function execute each argument and return a integer to standard out.
+* [check_functions.c](https://github.com/gdorelo/simple_shell/blob/master/check_functions.c)
+Functions to check "exit" and "env" and extra spaces passed to the command line.
 
 * [ctrl_c.c](https://github.com/gdorelo/simple_shell/blob/master/ctrl_c.c)
 Function to not exit when the user presses "Ctrl + c".
 
+* [execute.c](https://github.com/gdorelo/simple_shell/blob/master/execute.c)
+Function execute each argument and return a integer to standard out.
 
-#### REQUIREMENTS
+* [getpath.c](https://github.com/gdorelo/simple_shell/blob/master/getpath.c)
+Function to find a command with or without path.
+
+* [loop.c](https://github.com/gdorelo/simple_shell/blob/master/loop.c)
+Initializace the main loop of the shell.
+
+* [main.c](https://github.com/gdorelo/simple_shell/blob/master/main.c)
+Entry point to the shell.
+
+* [print_functions.c](https://github.com/gdorelo/simple_shell/blob/master/print_functions.c)
+Custom print functions.
+
+* [read_command_line.c](https://github.com/gdorelo/simple_shell/blob/master/read_command_line.c)
+Function that uses getline to read the command line.
+
+* [prompt.c](https://github.com/gdorelo/simple_shell/blob/master/prompt.c)
+Function to print the prompt.
+
+* [shell.h](https://github.com/gdorelo/simple_shell/blob/master/shell.h)
+Header of functions where are store the prototypes and libraries.
+
+* [split_functions.c](https://github.com/gdorelo/simple_shell/blob/master/split_functions.c)
+Functions to split the command line and the PATH.
+
+* [string_functions.c](https://github.com/gdorelo/simple_shell/blob/master/string_functions.c)
+Functions to handle strings.
+
+* [sys_error.c](https://github.com/gdorelo/simple_shell/blob/master/sys_error.c)
+Function to write errors when a command is not found or if fork fails.
+
+#### REQUIREMENTS (from the intranet project page)
 
 * Allowed editors: *vi*, *vim*, *emacs*
 * All your files will be compiled on Ubuntu 14.04 LTS.
@@ -97,7 +114,7 @@ Function to not exit when the user presses "Ctrl + c".
 * No more than 5 functions per file.
 * Your shell should not have any memory leaks.
 * All your header files should be include guarded.
-* Use system calls only when you need to (why?).
+* Use system calls only when you need to.
 
 
 ### EXAMPLES

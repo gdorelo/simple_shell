@@ -1,10 +1,10 @@
 #include "shell.h"
 /**
- * execute - function that execute all arguments in command line.
- * @args: Arguments typed into the line command.
- * @counter: counter of commands.
- * @program: Name of the program.
- * Return: No return.
+ * execute - function that executes all arguments passed in command line.
+ * @args: Arguments typed into the command line.
+ * @counter: counter
+ * @program: Name of the program
+ * Return: void
  */
 int execute(char **args, int counter, char *program)
 {

@@ -69,7 +69,7 @@ char *_strtok(char *arg, char *delimiter)
 	if (*(str + c) != '\0')
 		token = str + c;
 	else
-		token = '\0';
+		token = NULL;
 	return (str + i);
 }
 /**

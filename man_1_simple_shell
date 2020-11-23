@@ -5,7 +5,7 @@ simple_shell - Holberton School Simple Shell
 
 -SH PROLOGUE
 .PP
-A shell is an application that allows interacting with the computer. In a shell the user can run programs and also redirect the input and output from and to a file.
+A shell is an application that allows interacting with the computer. In a shell the user can run programs and also redirect the output to a file.
 
 .SH SYNOPSIS
 .B simple_shell format [[command line][argumment...]]...
@@ -13,7 +13,7 @@ A shell is an application that allows interacting with the computer. In a shell 
 
 .SH DESCRIPTION
 .PP
-Our Shell is a simple UNIX command language interpreter that reads commands from either a file or standard input and executes them.
+Our Shell is a simple UNIX command language interpreter that reads commands from standard input and executes them.
 
 .SS Invocation
 .PP

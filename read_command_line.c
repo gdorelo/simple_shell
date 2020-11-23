@@ -2,7 +2,7 @@
 /**
  * read_command_line - Function that reads the command line.
  * @status: Exit with status at EOF
- * Return: string passed to the command line 
+ * Return: string passed to the command line.
  */
 char *read_command_line(int status)
 {

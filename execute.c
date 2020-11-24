@@ -15,7 +15,7 @@ int execute(char **args, int counter, char *program)
 	command = getpath(args[0]);
 	if (command == NULL)
 	{
-		sys_error(args[0], counter, "not found", program);
+		sys_error(args[0], counter, "command not found", program);
 		free(args[0]);
 		free(args);
 		return (127);
@@ -40,12 +40,14 @@ int execute(char **args, int counter, char *program)
 		if (WIFEXITED(status))
 		errorstatus = WEXITSTATUS(status);
 	}
+	
 	if (!_strcmp(command, args[0]))
 	{
 		free(args[0]);
 		free(args);
 		return (errorstatus);
 	}
+
 	_free(command, args[0], args);
 	return (errorstatus);
 }

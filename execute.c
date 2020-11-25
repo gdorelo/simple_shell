@@ -40,14 +40,12 @@ int execute(char **args, int counter, char *program)
 		if (WIFEXITED(status))
 		errorstatus = WEXITSTATUS(status);
 	}
-	
 	if (!_strcmp(command, args[0]))
 	{
 		free(args[0]);
 		free(args);
 		return (errorstatus);
 	}
-
 	_free(command, args[0], args);
 	return (errorstatus);
 }
